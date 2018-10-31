@@ -20,13 +20,15 @@
 
   <ion-item>
     <ion-label fixed>Username</ion-label>
-    <ion-input type="text" value=""></ion-input>
+    <ion-input type="text" value="" [(ngModel)] = "usuario"></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label fixed>Password</ion-label>
-    <ion-input type="password"></ion-input>
+    <ion-input type="password" [(ngModel)] = "password"></ion-input>
   </ion-item>
-  <button (click) = "clickHome()" ion-button color="secondary" block>Iniciar sesión</button>
+  <ion-item>
+    <button [disabled] = "this.usuario.length == 0 || this.password.length == 0"  (click) = "clickHome()" ion-button color="secondary" block>Iniciar sesión</button>
+  </ion-item>
 </ion-list>
 </ion-content>
