@@ -8,11 +8,13 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
 import {HttpModule} from "@angular/http";
+import { PlantaPage } from '../pages/planta/planta';
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    LoginPage
+    LoginPage,
+    PlantaPage
   ],
   imports: [
     BrowserModule,
@@ -23,7 +25,8 @@ import {HttpModule} from "@angular/http";
   entryComponents: [
     MyApp,
     HomePage,
-    LoginPage
+    LoginPage,
+    PlantaPage
   ],
   providers: [
     StatusBar,

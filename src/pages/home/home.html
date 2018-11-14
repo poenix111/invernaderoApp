@@ -1,14 +1,17 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      invernaderos
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content padding style="background-color: #757575"> 
+  <ion-card *ngFor = "let i of invernaderos" style="border-radius: 10px"  (click)="clickPlanta(i)">
+    <ion-item style="background-color: #81C668">
+      <ion-icon name="md-aperture" item-start></ion-icon>
+      <h2>{{i.nombre}}</h2>
+      <p>{{i.ubicacion}}</p> 
+    </ion-item>
+  </ion-card>
 </ion-content>
